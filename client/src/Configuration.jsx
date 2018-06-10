@@ -17,7 +17,7 @@ class Configuration extends Component {
     async fetchConfiguration() {
         const { change } = this.props;
         try {
-            const {data} = await axios.get('./config');
+            const {data} = await axios.get('/config');
             if (data) {
                 this.config = data;
                 Object.keys(data).forEach(key => change(key, data[key]));
