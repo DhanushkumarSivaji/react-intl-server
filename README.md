@@ -1,5 +1,3 @@
-[![Gem](https://img.shields.io/gem/v/nextcloud.svg?style=flat-square)](https://rubygems.org/gems/nextcloud) [![Travis](https://img.shields.io/travis/dachinat/nextcloud.svg?style=flat-square)](https://travis-ci.org/dachinat/nextcloud) [![Coveralls github](https://img.shields.io/coveralls/github/dachinat/nextcloud.svg?style=flat-square)](https://coveralls.io/github/dachinat/nextcloud) [![Yard Docs](https://img.shields.io/badge/yard-docs-blue.svg?style=flat-square)](http://rubydoc.info/github/dachinat/nextcloud/master)
-
 # React-Intl-Server
 
 `react-intl-server` is a translation tool, originally built for [react-intl-translations-manager](https://github.com/GertjanReynaert/react-intl-translations-manager), but can be used for anything that stores `.json` files with an object of 'key/value' pairs.
