@@ -32,7 +32,7 @@ class Configuration extends Component {
     renderField({meta: {error, touched}, input}) {
         return (
             <Fragment>
-                <InputText {...input} placeholder="i.e.: /var/project1/intl" size="30" />
+                <InputText {...input} placeholder="i.e.: /var/project1/intl" style={{width: '100%'}} />
                 {error && touched ? (
                     <div style={{marginTop: '5px'}}><Message severity="error" text={error} /></div>
                 ) : null}

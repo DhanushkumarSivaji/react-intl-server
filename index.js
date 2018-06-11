@@ -83,7 +83,7 @@ app.get('/fetchFiles', async (req, res) => {
                                 data = '';
                             }
 
-                            item.data = data;
+                            item.content = data;
                         });
                     };
 
@@ -116,6 +116,35 @@ app.get('/fetchFiles', async (req, res) => {
         }
     } catch(e) {
         console.error('No config file', e);
+        res.send(null);
+    }
+});
+
+app.patch('/updateTranslation', (req, res) => {
+    const { path, key, value } = req.body;
+
+    try {
+        const content = fs.readFileSync(path).toString();
+
+        try {
+            const json = JSON.parse(content);
+
+            try {
+                json[key] = value;
+
+                fs.writeFileSync(path, JSON.stringify(json));
+
+                res.send(json);
+            } catch(e) {
+                console.error('Could not write', path, e);
+                res.send(null);
+            }
+        } catch (e) {
+            console.error('Could not parse', path, e);
+            res.send(null);
+        }
+    } catch(e) {
+        console.error('Could not read file', e);
         res.send(null);
     }
 });

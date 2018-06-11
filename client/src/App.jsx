@@ -4,16 +4,13 @@ import { withRouter } from 'react-router-dom'
 
 import FileEditor from './FileEditor.jsx';
 import Configuration from './Configuration.jsx';
-import About from './About.jsx';
-
 
 class App extends Component {
     state = {activeIndex: 1};
 
     tabs = [
         {name: 'File editor', component: FileEditor, icon: 'fa-edit'},
-        {name: 'Configuration', component: Configuration, icon: 'fa-gear'},
-        {name: 'About', component: About, icon: 'fa-info'},
+        {name: 'Configuration', component: Configuration, icon: 'fa-gear'}
     ];
 
     componentDidMount() {
