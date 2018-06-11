@@ -132,7 +132,7 @@ app.patch('/updateTranslation', (req, res) => {
             try {
                 json[key] = value;
 
-                fs.writeFileSync(path, JSON.stringify(json));
+                fs.writeFileSync(path, JSON.stringify(json, undefined, 2));
 
                 res.send(json);
             } catch(e) {
